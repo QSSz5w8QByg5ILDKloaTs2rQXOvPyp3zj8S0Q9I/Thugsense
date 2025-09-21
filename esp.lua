@@ -787,4 +787,12 @@ function EspInterface.getHealth(player)
 	return 100, 100;
 end
 
+function EspInterface.isFriendly(player)
+	return player.Team and player.Team == localPlayer.Team;
+end
+
+function EspInterface.getTeamColor(player)
+	return player.Team and player.Team.TeamColor and player.Team.TeamColor.Color;
+end
+
 return EspInterface;
